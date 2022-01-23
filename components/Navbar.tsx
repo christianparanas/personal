@@ -63,7 +63,7 @@ function Navbar() {
       </div>
 
       <div
-        className={`${overlayClass} absolute w-full h-full backdrop-blur-3xl py-2 px-4 text-right overflow-hidden`}
+        className={`${overlayClass} fixed w-full h-full backdrop-blur-3xl py-2 px-4 text-right overflow-x-hidden`}
       >
         <div className="flex justify-between items-center">
         <Icon props={{ w: "35", h: "35" }} />

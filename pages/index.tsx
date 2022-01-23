@@ -11,7 +11,7 @@ export default function Home() {
 
 
 
-      <div className="pt-20">
+      <div className="pt-20 h-96 pb-96">
         <div className="hero py-10 px-4">
           <div className="info">
             <p className="text-slate-400">
