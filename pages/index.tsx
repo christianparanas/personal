@@ -1,17 +1,21 @@
 import Head from "next/head";
 import Image from "next/image";
 
+import Navbar from "../components/Navbar";
+
 export default function Home() {
   return (
     <div className="">
-      <div className="">
-        <div className="hero">
+      <Navbar />
+
+      <div className="pt-20">
+        <div className="hero py-10 px-4">
           <div className="info">
-            <p>
-              Hello, <span>I am</span>
+            <p className="text-slate-400">
+              Hello, <span className="text-slate-50">I am</span>
             </p>
-            <h1>Christian R. Paranas</h1>
-            <p>
+            <h1 className="font-bold text-3xl py-2">Christian R. Paranas</h1>
+            <p className="text-slate-400">
               a software developer currently in Tacloban City, Philippines.
               Specializing in building websites and applications. My current
               toolset includes Vue, React, Redux, Node, Laravel, and other
