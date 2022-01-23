@@ -19,7 +19,7 @@ const container = {
 };
 
 const itemVariants = {
-  closed: { x: 100 },
+  closed: { x: 200 },
   open: { x: -5 },
 };
 
@@ -63,7 +63,7 @@ function Navbar() {
       </div>
 
       <div
-        className={`${overlayClass} absolute w-full h-full backdrop-blur-md py-2 px-4 text-right overflow-hidden`}
+        className={`${overlayClass} absolute w-full h-full backdrop-blur-3xl py-2 px-4 text-right overflow-hidden`}
       >
         <div className="flex justify-between items-center">
         <Icon props={{ w: "35", h: "35" }} />
@@ -71,7 +71,7 @@ function Navbar() {
         </div>
 
         <motion.ul
-          className="mt-8 grid gap-2"
+          className="mt-12 grid gap-2"
           animate={isOpen ? "open" : "closed"}
           variants={container}
         >
@@ -81,7 +81,7 @@ function Navbar() {
                 <motion.li
                   key={key}
                   variants={itemVariants}
-                  className="p-2"
+                  className="p-2 text-2xl"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   exit={{ x: 100 }}
