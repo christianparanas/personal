@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Squeeze as Hamburger } from "hamburger-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+import Icon from "./Icon";
+
 const container = {
   closed: {
     transition: {
@@ -32,16 +34,6 @@ function Navbar() {
   const [isOpen, setOpen] = useState(false);
   const [overlayClass, setOverlayClass] = useState("hidden");
 
-  const closeNav = () => {
-    setTimeout(() => {
-      setOpen(false);
-    }, 200);
-  };
-
-  useEffect(() => {
-    console.log('rerender')
-  }, [])
-
   useEffect(() => {
     if (isOpen == true) {
       setOverlayClass("block");
@@ -53,10 +45,18 @@ function Navbar() {
     }, 400);
   }, [isOpen]);
 
+  const closeNav = () => {
+    setTimeout(() => {
+      setOpen(false);
+    }, 200);
+  };
+
   return (
     <div className="">
       <div className="fixed w-full flex justify-between items-center py-2 px-4 backdrop-blur border-b-2 border-slate-400/10">
-        <div className="brand">Chan</div>
+        <div className="brand">
+          <Icon props={{ w: "35", h: "35" }} />
+        </div>
         <div className="navigation">
           <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>
@@ -65,8 +65,8 @@ function Navbar() {
       <div
         className={`${overlayClass} absolute w-full h-full backdrop-blur-md py-2 px-4 text-right overflow-hidden`}
       >
-        <div className="flex justify-between">
-          <div className=""></div>
+        <div className="flex justify-between items-center">
+        <Icon props={{ w: "35", h: "35" }} />
           <Hamburger toggled={isOpen} toggle={closeNav} />
         </div>
 
@@ -82,6 +82,8 @@ function Navbar() {
                   key={key}
                   variants={itemVariants}
                   className="p-2"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                   exit={{ x: 100 }}
                 >
                   {item.title}

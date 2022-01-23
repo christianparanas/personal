@@ -2,11 +2,14 @@ import Head from "next/head";
 import Image from "next/image";
 
 import Navbar from "../components/Navbar";
+import Icon from "../components/Icon";
 
 export default function Home() {
   return (
     <div className="">
       <Navbar />
+
+
 
       <div className="pt-20">
         <div className="hero py-10 px-4">
