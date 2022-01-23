@@ -71,7 +71,7 @@ function Navbar() {
         </div>
 
         <motion.ul
-          className="mt-12 grid gap-2"
+          className="mt-16 grid gap-4"
           animate={isOpen ? "open" : "closed"}
           variants={container}
         >
@@ -81,7 +81,7 @@ function Navbar() {
                 <motion.li
                   key={key}
                   variants={itemVariants}
-                  className="p-2 text-2xl"
+                  className="p-2 text-2xl font-extrabold"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   exit={{ x: 100 }}

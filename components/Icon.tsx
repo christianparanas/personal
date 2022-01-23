@@ -21,6 +21,9 @@ function Icon({ props }: any) {
       height={ props.h }
       version="1"
       viewBox="0 0 54 54"
+      initial={{ y: -200 }} 
+      animate={{ y: 0 }} 
+      transition={{ type: "spring", stiffness: 120 }}
     >
       <defs>
         <clipPath id="a">
