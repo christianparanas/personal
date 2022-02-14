@@ -66,7 +66,7 @@ function Navbar() {
         className={`${overlayClass} fixed w-full h-full backdrop-blur-3xl py-2 px-4 text-right overflow-x-hidden`}
       >
         <div className="flex justify-between items-center">
-        <Icon props={{ w: "35", h: "35" }} />
+          <Icon props={{ w: "35", h: "35" }} />
           <Hamburger toggled={isOpen} toggle={closeNav} />
         </div>
 
@@ -81,7 +81,7 @@ function Navbar() {
                 <motion.li
                   key={key}
                   variants={itemVariants}
-                  className="p-2 text-2xl font-extrabold"
+                  className="p-2 text-2xl font-bold cursor-pointer"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   exit={{ x: 100 }}

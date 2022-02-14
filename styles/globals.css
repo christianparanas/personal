@@ -5,4 +5,5 @@
 html,
 body {
   @apply font-sans bg-slate-900/75 text-slate-50 h-full;
+  -webkit-tap-highlight-color: transparent;
 }

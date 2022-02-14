@@ -9,8 +9,6 @@ export default function Home() {
     <div className="">
       <Navbar />
 
-
-
       <div className="pt-20 h-96 pb-96">
         <div className="hero py-10 px-4">
           <div className="info">
@@ -26,6 +24,8 @@ export default function Home() {
             </p>
           </div>
         </div>
+
+        <div className="about"></div>
       </div>
     </div>
   );

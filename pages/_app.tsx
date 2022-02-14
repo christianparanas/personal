@@ -15,16 +15,23 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     setTimeout(() => {
-      setLoader(false)
-    }, 3000)
+      setLoader(false);
+    }, 2000);
   }, []);
 
   return (
     <>
       <AnimatePresence>
-      <motion.div animate={loader ? "open" : "closed"} variants={itemVariants} exit={{ x: 100 }} className={`${loader ? "" : "hidden"} absolute z-10 w-full h-full bg-slate-900 flex items-center justify-center`}>
-        <Icon props={{ w: "60", h: "60" }} />
-      </motion.div>
+        <motion.div
+          animate={loader ? "open" : "closed"}
+          variants={itemVariants}
+          exit={{ x: 100 }}
+          className={`${
+            loader ? "" : "hidden"
+          } absolute z-10 w-full h-full bg-slate-900 flex items-center justify-center`}
+        >
+          <Icon props={{ w: "60", h: "60" }} />
+        </motion.div>
       </AnimatePresence>
       <Component {...pageProps} />
     </>
